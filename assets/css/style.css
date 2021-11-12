@@ -477,7 +477,17 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px;
   padding: 0px;
 }
-
+@media (max-width : 760px)
+{
+  .imghero
+  {
+    top: 19px;
+  }
+  .hero-waves
+  {
+    height: 10px;
+  }
+}
 .wave1 use {
   -webkit-animation: move-forever1 10s linear infinite;
   animation: move-forever1 10s linear infinite;
