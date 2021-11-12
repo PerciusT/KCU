@@ -355,7 +355,7 @@ h1, h2, h3, h4, h5, h6 {
 {
   max-width: 110%;
   position: relative;
-  top: 50px;
+  top: 35px;
 }
 #hero {
   width: 110%;
@@ -513,6 +513,13 @@ h1, h2, h3, h4, h5, h6 {
 .wave6 use {
   -webkit-animation: move-forever3 6s linear infinite;
   animation: move-forever3 6s linear infinite;
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+
+}
+.wave7 use {
+  -webkit-animation: move-forever3 7s linear infinite;
+  animation: move-forever3 7s linear infinite;
   -webkit-animation-delay: -2s;
   animation-delay: -2s;
 
