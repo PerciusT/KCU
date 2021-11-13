@@ -15,11 +15,13 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var months = Math.floor(days/30);
 
+  //Display days
+  var ddays= days-(months*30);
+ 
   // Display the result in the element 
 $(document).ready(function()
 {
-    $("#clock-c").html( "<h2 id=\"days-span\">" + months + " m " + days + " d "
-     + hours + " h </h2>");
+    $("#clock-c").html( "<h2 id=\"days-span\">" + months + " months and " + ddays + " days </h2>");
 }
 )
  
