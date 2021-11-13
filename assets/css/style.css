@@ -356,11 +356,11 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 110%;
   position: relative;
   top: 35px;
-  left: 50px;
+  right: 20px;
 }
 #hero {
   width: 110%;
-  background: rgba(178, 191, 199, 1.0);
+  background: #19c5ff;
   position: relative;
   padding: 120px 0 0 0;
 }
@@ -483,7 +483,6 @@ h1, h2, h3, h4, h5, h6 {
   .imghero
   {
     top: 19px;
-    left: 0px;
   }
   .hero-waves
   {
@@ -1740,3 +1739,30 @@ THIS IS FOR THE COUNTDOWN IN THE TESTIMONIAL*/
 {
   font-family: "Poppins", sans-serif;
 }
+#clock-c
+{
+  text-transform: lowercase;
+}
+/*//Scroll bar*/ 
+/* ===== Scrollbar CSS ===== */
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #83cffb #025b8d;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #025b8d;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #83cffb;
+    border-radius: 90px;
+    border: 2px ridge #547fc4;
+  }
