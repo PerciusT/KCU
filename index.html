@@ -27,6 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/registeration.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Bootslander - v4.6.0
@@ -54,6 +55,7 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#details">Why us?</a></li>
           <li><a class="nav-link scrollto" href="#features">Features</a></li>
+          <li><a class="nav-link scrollto" href="register.html">Register</a></li>
           <!-- <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li> -->
          <!--  <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> -->
@@ -102,7 +104,10 @@
             <h1><span>Garikar</span> or Chal</h1>
             <h2>We are here to securely help you go where you want to</h2>
             <div class="text-center text-lg-start">
-              <a href="#about" class="btn-get-started scrollto">Get Started</a>
+              <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a> -->
+              <button type="button" class="btn btn-get-started" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  Join Us
+              </button>
             </div>
           </div>
         </div>
@@ -435,7 +440,139 @@
 
       </div>
     </section><!-- End Details Section -->
+    <!-- REGISTRATION -->
 
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                        <h3>Welcome</h3>
+                        <p>Join Us!</p>
+                        <input type="submit"  name="" value="Login"/><br/>
+                    </div>
+                    <div class="col-md-9 register-right">
+                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <button class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Driverr</a>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Rider</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Apply as a Driver</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Password *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="maxl">
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="gender" value="male" checked>
+                                                    <span> Male </span> 
+                                                </label>
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="gender" value="female">
+                                                    <span>Female </span> 
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control">
+                                                <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
+                                                <option>What is your Birthdate?</option>
+                                                <option>What is Your old Phone Number</option>
+                                                <option>What is your Pet Name?</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Enter Your Answer *" value="" />
+                                        </div>
+                                        <input type="submit" class="btnRegister"  value="Register"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <h3  class="register-heading">Apply as a Rider</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Email *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone *" value="" />
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Password *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control">
+                                                <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
+                                                <option>What is your Birthdate?</option>
+                                                <option>What is Your old Phone Number</option>
+                                                <option>What is your Pet Name?</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="`Answer *" value="" />
+                                        </div>
+                                        <input type="submit" class="btnRegister"  value="Register"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- ======= Gallery Section ======= -->
     <!-- <section id="gallery" class="gallery">
       <div class="container">
@@ -515,9 +652,8 @@
 
       </div>
     </section> --><!-- End Gallery Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
+    <!-- ======= comingsoontab Section ======= -->
+    <section id="comingsoontab" class="comingsoontab">
       <!-- <div class="count_down">
         <div class="row">
           <div class="solidCount">
@@ -531,7 +667,7 @@
         </div>
 
       </div> -->
-        <div class="container py-5">
+        <div class="comingsoontabin container py-5" data-aos="fade-right">
           
         
         
@@ -553,7 +689,7 @@
         </div>
 
     </section>
-    <!-- End Testimonials Section -->
+    <!-- End comingsoontab Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -717,6 +853,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/count.js"></script>
+  <script src="assets/js/register.js"></script>
 
 
 </body>
