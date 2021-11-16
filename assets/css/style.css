@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #1acc8d;
+  border: 6px solid rgba(2, 99, 141, 0.9);
   border-top-color: #d2f9eb;
   border-radius: 50%;
   width: 60px;
@@ -482,9 +482,8 @@ h1, h2, h3, h4, h5, h6 {
 {
   .imghero
   {
-    left: 7px;
-    top: 20px;
-    content: url("https://cdn.discordapp.com/attachments/807548642764128256/909179580122816522/moto-bg.png"); 
+    top: 12px;
+     
   }
   .hero-waves
   {
