@@ -10,6 +10,13 @@
     margin-right: 0px
 
 }
+@media (max-width: 991px)
+{
+  .register
+  {
+    margin-top: 12%;
+  }
+}
 .register-left{
     text-align: center;
     color: #fff;
@@ -54,7 +61,20 @@
 }
 .register .register-form{
     padding: 10%;
+
     margin-top: 10%;
+}
+@media (max-width: 991px)
+{
+    .register .register-form
+    {
+        position: relative;
+        left: 10%;
+        width: auto;
+        padding-top: 20%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 }
 .btnRegister{
     float: right;
@@ -101,6 +121,11 @@
     margin-top: 8%;
     margin-bottom: -15%;
     color: #495057;
+}
+.wrongpass
+{
+    outline: 5px solid rgba(221,45,9,0.44);
+    outline-offset: 0px;
 }
 #header.header-transparent {
   background: rgba(2, 99, 141, 1.0);
