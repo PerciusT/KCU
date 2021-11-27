@@ -360,7 +360,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero {
   width: 110%;
-  background: #19c5ff;
+  background: #e6f6fe;
   position: relative;
   padding: 120px 0 0 0;
 }
@@ -377,14 +377,14 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  color: rgba(255, 255, 255, 0.8);
+  color: black;
 }
 #hero h1 span {
-  color: #fff;
+  color: grey;
   border-bottom: 4px solid #1acc8d;
 }
 #hero h2 {
-  color: rgba(255, 255, 255, 0.8);
+  color: black;
   margin-bottom: 40px;
   font-size: 24px;
 }
