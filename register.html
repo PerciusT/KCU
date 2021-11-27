@@ -103,20 +103,20 @@
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                 <h3 class="register-heading">Apply as a Driver</h3>
-                                <form action="/action_page.js">
+                                <form action="success.html" method="post">
                                 <div class="row register-form">
                                     <div class="col-md-6 col-sm-7" >
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="First Name *" value="" required/>
+                                            <input type="text" class="form-control" name="fname" placeholder="First Name *" value="" required/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Last Name *" value="" required/>
+                                            <input type="text" class="form-control" name="lname" placeholder="Last Name *" value="" required/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control" id="passdrive" placeholder="Password *" value="" minlength="8" required/>
+                                            <input type="password" class="form-control" name="pass" id="passdrive" placeholder="Password *" value="" minlength="8" required/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control" id="passdrivec" placeholder="Confirm Password *" value="" minlength="8" required/>
+                                            <input type="password" class="form-control" name="passc" id="passdrivec" placeholder="Confirm Password *" value="" minlength="8" required/>
                                         </div>
                                         <div class="form-group">
                                             <div class="maxl">
@@ -133,13 +133,13 @@
                                     </div>
                                     <div class="col-md-6 col-sm-7">
                                         <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Your Email *" value="" required/>
+                                            <input type="email" class="form-control" name="email" placeholder="Your Email *" value="" required/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="number" minlength="7" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" required />
+                                            <input type="number" minlength="7" maxlength="10" name="phone" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" required />
                                         </div>
-                                        <div class="form-group" required>
-                                            <select class="form-control">
+                                        <div class="form-group">
+                                            <select class="form-control" name="question" required>
                                                 <option class="hidden"  selected disabled>Question</option>
                                                 <option>What is your Birthdate?</option>
                                                 <option>What is Your old Phone Number</option>
@@ -147,7 +147,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Enter Your Answer *" value="" required/>
+                                            <input type="text" class="form-control" name="qanswer" placeholder="Enter Your Answer *" value="" required/>
                                         </div>
                                         <input type="submit" id="btnRegisterID1" class="btnRegister"  value="Register" />
                                     </div>
@@ -155,40 +155,40 @@
                             </div>
                             <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <h3  class="register-heading">Apply as a Rider</h3>
-                                <form action="/action_page.js">
+                                <form action="/">
                                 <div class="row register-form">
                                     <div class="col-md-6 col-sm-7">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="First Name *" value="" required/>
+                                            <input type="text" class="form-control" name="fname" placeholder="First Name *" value="" required/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Last Name *" value="" required/>
+                                            <input type="text" class="form-control" name="lname" placeholder="Last Name *" value="" required/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Email *" value="" required/>
+                                            <input type="email" class="form-control" name="email" placeholder="Email *" value="" required/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="number" maxlength="7" minlength="10" class="form-control" placeholder="Phone *" value="" required/>
+                                            <input type="number" maxlength="7" name="phone" minlength="10" class="form-control" placeholder="Phone *" value="" required/>
                                         </div>
 
 
                                     </div>
                                     <div class="col-md-6 col-sm-7">
                                         <div class="form-group">
-                                            <input type="password" class="form-control" id="passride" placeholder="Password *" value="" minlength="8" required/>
+                                            <input type="password" class="form-control" id="passride" name="pass" placeholder="Password *" value="" minlength="8" required/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control" id="passridec" placeholder="Confirm Password *" value="" minlength="8" required  />
+                                            <input type="password" class="form-control" id="passridec" name="passc" placeholder="Confirm Password *" value="" minlength="8" required  />
                                         </div>
-                                        <div class="form-group" required>
-                                            <select class="form-control">
+                                        <div class="form-group">
+                                            <select class="form-control" required name="question">
                                                 <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
                                                 <option>What is your Birthdate?</option>
                                                 <option>What is Your old Phone Number</option>
                                                 <option>What is your Pet Name?</option>
                                             </select>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group" name="qanswer">
                                             <input type="text" class="form-control" placeholder="`Answer *" value="" required/>
                                         </div>
                                         <input type="submit" id="btnRegisterID" class="btnRegister"  value="Register" />
@@ -253,7 +253,7 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
             <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
+            <form action="/" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
 
