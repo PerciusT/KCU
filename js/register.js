@@ -108,15 +108,15 @@ $(document).ready(function()
     }
     function passcheckager()
     {
-        if(isOver10(new Date($("#dbirthday").val())))
+        if(isOver10(new Date($("#rbirthday").val())))
         {
-            $("#dbirthday").removeClass("wrongpass");
+            $("#rbirthday").removeClass("wrongpass");
             $("#btnRegisterID").prop('disabled',false);
             $("#btnRegisterID").removeClass("btngrey");
         }
         else 
         {
-            $("#dbirthday").addClass("wrongpass");
+            $("#rbirthday").addClass("wrongpass");
             $("#btnRegisterID").prop('disabled',true);
             $("#btnRegisterID").addClass("btngrey");
         }
