@@ -1,0 +1,26 @@
+#main
+{
+	margin-top: 2%;
+}
+.privacy-top
+{
+	background-color: rgb(245,244,244, 80%)
+}
+.p-content
+{
+
+}
+.privacy-inner
+{
+	border-radius: 15px;
+	-webkit-box-shadow: 1px 2px 15px 5px rgba(0,0,0,0.51); 
+	box-shadow: 1px 2px 15px 5px rgba(0,0,0,0.51);
+	background-color: white;
+	width: 70%;
+	margin: 0 auto;
+	padding: 2% 5%;
+}
+.cen
+{
+	text-align: center;
+}
