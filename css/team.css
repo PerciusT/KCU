@@ -7,6 +7,17 @@
   margin-left: auto;
   margin-right: auto;
 }
+.tophead 
+{
+  text-align: center;
+  font-size: 72px;
+  color: rgba(2, 91, 141, 0.9);
+  padding-bottom: 20px;
+}
+.vissionv
+{
+  color: #1acf9a;
+}
 .ourvision
 {
   margin-top: 0%;
@@ -27,11 +38,28 @@ box-shadow: 0px 2px 16px 5px rgba(28,110,164,0.89);
 }
 @media (max-width: 991px)
 {
+  .vissionv
+  {
+    color: #1acf9a;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  .tophead 
+  {
+    text-align: center;
+    font-size: 48px;
+    color: rgba(2, 91, 141, 0.9);
+
+    margin-top: 15%;
+    padding-top: 2%;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
   .ourvision 
   {
-    margin-top: 10%;
     padding: 0%;
     padding-top: 15%;
+    padding-bottom: 8%;
     transform: scale(0.8);
   }
 }

@@ -1,3 +1,7 @@
+.imgjump
+{
+    filter:invert(100%);
+}
 .bod
  {
     background-color: #00c6ff;
