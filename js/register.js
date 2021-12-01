@@ -1,7 +1,6 @@
 $(document).ready(function()
 {
-    var numbers = /^\d+$/
-	var email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
 	var cnicn=/\d{5}-\d{7}-\d/
     $("#home-tab").click(function()
     {
@@ -67,6 +66,48 @@ $(document).ready(function()
     //     }
 
     // }
+    function disabler()
+    {
+        $("#btnRegisterID").prop('disabled',true);
+        $("#btnRegisterID").addClass("btngrey");
+    }
+    function enabler()
+    {
+        $("#btnRegisterID").prop('disabled',false);
+        $("#btnRegisterID").removeClass("btngrey");
+    }
+    function disabled()
+    {
+        $("#btnRegisterID1").prop('disabled',true);
+        $("#btnRegisterID1").addClass("btngrey");
+    }
+    function enabled()
+    {
+        $("#btnRegisterID1").prop('disabled',false);
+        $("#btnRegisterID1").removeClass("btngrey");
+    }
+    function validateall()
+    {
+        if($("#fname").val()==""||$("#lname").val()==""||$("#emaild").val()==""||$("#driverPH").val()==""||$("#carnumb").val()==""||$("#selectType").val()=="")
+        {
+            
+            console.log("disabled");
+            disabled();
+        }
+        else 
+        {
+            enabled(); 
+        }
+        if($("#fnamer").val()==""||$("#namer").val()==""||$("#emailr").val()==""||$("#phoner").val()==""||$("#occupation").val()==""||$("#addressr").val()=="")
+        {
+            console.log("disabler");
+            disabler();
+        }
+        else
+        {
+            enabler();
+        }
+    }
     function isOver18(dateOfBirth) {
         // find the date 18 years ago
         const date18YrsAgo = new Date();
@@ -95,30 +136,23 @@ $(document).ready(function()
         if(isOver18(new Date($("#dbirthday").val())))
         {
             $("#dbirthday").removeClass("wrongpass");
-            $("#btnRegisterID1").prop('disabled',false);
-            $("#btnRegisterID1").removeClass("btngrey");
         }
         else 
         {
             $("#dbirthday").addClass("wrongpass");
-            $("#btnRegisterID1").prop('disabled',true);
-            $("#btnRegisterID1").addClass("btngrey");
         }
     
     }
+    
     function passcheckager()
     {
         if(isOver10(new Date($("#rbirthday").val())))
         {
             $("#rbirthday").removeClass("wrongpass");
-            $("#btnRegisterID").prop('disabled',false);
-            $("#btnRegisterID").removeClass("btngrey");
         }
         else 
         {
             $("#rbirthday").addClass("wrongpass");
-            $("#btnRegisterID").prop('disabled',true);
-            $("#btnRegisterID").addClass("btngrey");
         }
     
     }
@@ -126,15 +160,12 @@ $(document).ready(function()
     {
         if($("#cnicd").val().match(cnicn))
         {
+           
             $("#cnicd").removeClass("wrongpass");
-            $("#btnRegisterID1").prop('disabled',false);
-            $("#btnRegisterID1").removeClass("btngrey");
         }
         else 
         {
             $("#cnicd").addClass("wrongpass");
-            $("#btnRegisterID1").prop('disabled',true);
-            $("#btnRegisterID1").addClass("btngrey");
             
         }
     }
@@ -143,14 +174,10 @@ $(document).ready(function()
         if($("#cnicr").val().match(cnicn))
         {
             $("#cnicr").removeClass("wrongpass");
-            $("#btnRegisterID").prop('disabled',false);
-            $("#btnRegisterID").removeClass("btngrey");
         }
         else 
         {
             $("#cnicr").addClass("wrongpass");
-            $("#btnRegisterID").prop('disabled',true);
-            $("#btnRegisterID").addClass("btngrey");
             
         }
     }
@@ -160,15 +187,12 @@ $(document).ready(function()
         {
             $("#passdrive").removeClass("wrongpass");
             $("#passdrivec").removeClass("wrongpass");
-            $("#btnRegisterID1").prop('disabled',false);
-            $("#btnRegisterID1").removeClass("btngrey");
         }
         else
         {
+            
             $("#passdrivec").addClass("wrongpass");
             $("#passdrive").addClass("wrongpass");
-            $("#btnRegisterID1").prop('disabled',true);
-            $("#btnRegisterID1").addClass("btngrey");
         }
 
     }
@@ -176,17 +200,63 @@ $(document).ready(function()
     {
         if($("#passride").val() == $("#passridec").val())
         {
+        
             $("#passride").removeClass("wrongpass");
             $("#passridec").removeClass("wrongpass");
-            $("#btnRegisterID").prop('disabled',false);
-            $("#btnRegisterID").removeClass("btngrey");
         }
         else
         {
             $("#passride").addClass("wrongpass");
             $("#passridec").addClass("wrongpass");
-            $("#btnRegisterID").prop('disabled',true);   
-            $("#btnRegisterID").addClass("btngrey");
         }
     }
+    $(document).keyup(function (event) {
+        if($("#passdrive").val() == $("#passdrivec").val())
+        {
+            if($("#cnicd").val().match(cnicn))
+            {
+                if(isOver18(new Date($("#dbirthday").val())))
+                {
+                    
+                        enabler();
+                }
+                else
+                {
+                    disabled();
+                }
+            }
+            else
+            {
+                disabled();
+            }
+        }
+        else 
+        {
+            disabled();
+        }
+        if($("#passride").val() == $("#passridec").val())
+        {
+            if($("#cnicr").val().match(cnicn))
+            {
+                if(isOver10(new Date($("#rbirthday").val())))
+                {
+                    enabler();
+                }
+                else
+                {
+                   disabler();
+                }
+            }
+            else
+            {
+                disabler();
+            }
+        }
+        else
+        {
+            disabler();
+        }
+        
+    });
+    
 });

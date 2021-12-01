@@ -90,6 +90,69 @@
         // const firebase = require("firebase");
         // // Required for side-effects
         // require("firebase/firestore");
+        var numbers = /^\d+$/
+        var email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        function validated()
+        {
+            if($("#fname").val()==""||$("#lname").val()==""||$("#emaild").val()==""||$("#driverPH").val()==""||$("#carnumb").val()==""||$("#selectType").val()=="")
+            {
+                
+                console.log("disabled");
+                return false;
+            }
+            else
+            {
+              if($("#emaild").val().match(email))
+              {
+                if($("#driverPH").val().match(numbers))
+                {
+                  return true;
+                }
+                else
+                {
+                  return false
+                }
+              }
+              else
+              {
+                return false;
+              }
+            }
+        }
+        function validater()
+        {
+          if($("#fnamer").val()==""||$("#namer").val()==""||$("#emailr").val()==""||$("#phoner").val()==""||$("#occupation").val()==""||$("#addressr").val()=="")
+          {
+              console.log("disabler");
+              return false;
+          }
+          else
+          {
+              if($("#emailr").val().match(email))
+              {
+                if($("#phoner").val().match(numbers))
+                {
+                  return true;
+                }
+                else
+                {
+                  return false
+                }
+              }
+              else
+              {
+                return false;
+              }
+          }
+        }
+
+
+
+
+
+
+
+
 
         const firebaseConfig = {
           apiKey: "AIzaSyDUwczbLoMdhW7FezPD2CQaainvrrzM6zc",
@@ -108,21 +171,30 @@
         {
           var user= 'driver/';
           var cnic=$('input[name="cnic"]').val();
+          var genderd="male";
+          if ($("input[name='gender'][value='female']").prop("checked"))
+          {
+            genderd="female"
+          }
           if(checkri(cnic,user))
           {
-            console.log(cnic);
-            firebase.database().ref(user+cnic).set({
-            Birthday : $('input[name="birth"]').val(),
-            cnic: $('input[name="cnic"]').val(),
-            carnumber: $('input[name="carnumb"]').val(),
-            email: $('input[name="email"]').val(),
-            father : $('input[name="lname"]').val(),
-            gender : $('input[name="gender"]').val(),
-            name : $('input[name="fname"]').val(),
-            password : $('input[name="pass"]').val(),
-            phone : $('input[name="phone"]').val(),
-            type : $('select[name="cartype"]').val(),
-        });
+            if(validated())
+            {
+              console.log(cnic);
+              firebase.database().ref(user+cnic).set({
+              Birthday : $('input[name="birth"]').val(),
+              cnic: $('input[name="cnic"]').val(),
+              carnumber: $('input[name="carnumb"]').val(),
+              email: $('input[name="email"]').val(),
+              father : $('input[name="lname"]').val(),
+              gender : genderd,
+              name : $('input[name="fname"]').val(),
+              password : $('input[name="pass"]').val(),
+              phone : $('input[name="phone"]').val(),
+              type : $('select[name="cartype"]').val(),
+              });
+            }
+            
         }
           
       }
@@ -130,21 +202,30 @@
         {
           var user= 'rider/';
           var cnic=$("#cnicr").val();
+          var genderr="male";
+          if ($("input[name='genderr'][value='female']").prop("checked"))
+          {
+            genderr="female";
+          }
           if(checkri(cnic,user))
           {
-            console.log(cnic);
-            firebase.database().ref(user+cnic).set({
-              Birthday : $('#rbirthday').val(),
-              cnic: $('#cnicr').val(),
-              email: $('#emailr').val(),
-              father : $('#fnamer').val(),
-              gender : $('input[name="genderr"]').val(),
-              name : $('#namer').val(),
-              password : $('#passride').val(),
-              phone : $('#phoner').val(),
-              occupation : $('#occupationr').val(),
-              address : $('#addressr').val()
-            });
+            if(validater())
+            {
+              console.log(cnic);
+              firebase.database().ref(user+cnic).set({
+                Birthday : $('#rbirthday').val(),
+                cnic: $('#cnicr').val(),
+                email: $('#emailr').val(),
+                father : $('#fnamer').val(),
+                gender : genderr,
+                name : $('#namer').val(),
+                password : $('#passride').val(),
+                phone : $('#phoner').val(),
+                occupation : $('#occupationr').val(),
+                address : $('#addressr').val()
+              });
+            }
+            
         }   
       }
       function insertcontact()
@@ -173,7 +254,6 @@
             checker= data.val();
                
           });
-          console.log(checker==null)
           return checker==null;
         }
         $("#btnRegisterID1").click(insertd);
