@@ -196,6 +196,10 @@
             }
             
         }
+        else
+        {
+          $("#lblsuccessd ").val()="User already exists";
+        }
           
       }
         function insertdr()
@@ -226,7 +230,11 @@
               });
             }
             
-        }   
+        }
+        else
+        {
+          $("#lblsuccess").val()="User already exists";
+        }
       }
       function insertcontact()
       {
