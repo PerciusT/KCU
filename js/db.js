@@ -176,33 +176,31 @@
           {
             genderd="female"
           }
-          if(checkri(cnic,user))
+          firebase.database().ref(user+cnic).on('value',function(data)
           {
-            if(validated())
+            if(data.exists()==false)
             {
-              console.log(cnic);
-              firebase.database().ref(user+cnic).set({
-              Birthday : $('input[name="birth"]').val(),
-              cnic: $('input[name="cnic"]').val(),
-              carnumber: $('input[name="carnumb"]').val(),
-              email: $('input[name="email"]').val(),
-              father : $('input[name="lname"]').val(),
-              gender : genderd,
-              name : $('input[name="fname"]').val(),
-              password : $('input[name="pass"]').val(),
-              phone : $('input[name="phone"]').val(),
-              type : $('select[name="cartype"]').val(),
-              });
+              if(validated())
+              {
+                console.log(cnic);
+                firebase.database().ref(user+cnic).set({
+                Birthday : $('input[name="birth"]').val(),
+                cnic: $('input[name="cnic"]').val(),
+                carnumber: $('input[name="carnumb"]').val(),
+                email: $('input[name="email"]').val(),
+                father : $('input[name="lname"]').val(),
+                gender : genderd,
+                name : $('input[name="fname"]').val(),
+                password : $('input[name="pass"]').val(),
+                phone : $('input[name="phone"]').val(),
+                type : $('select[name="cartype"]').val(),
+                });
+              }
             }
-            
-        }
-        else
-        {
-          $("#lblsuccessd ").val()="User already exists";
-        }
+          });
           
-      }
-        function insertdr()
+        }
+      function insertdr()
         {
           var user= 'rider/';
           var cnic=$("#cnicr").val();
@@ -211,10 +209,13 @@
           {
             genderr="female";
           }
-          if(checkri(cnic,user))
+          firebase.database().ref(user+cnic).on('value',function(data)
           {
-            if(validater())
+            if(data.exists()==false)
             {
+              console.log("didnt exist");
+              if(validater())
+              {
               console.log(cnic);
               firebase.database().ref(user+cnic).set({
                 Birthday : $('#rbirthday').val(),
@@ -228,42 +229,35 @@
                 occupation : $('#occupationr').val(),
                 address : $('#addressr').val()
               });
+              ("#successmsg")
+              }
             }
-            
+          });
+
         }
-        else
-        {
-          $("#lblsuccess").val()="User already exists";
-        }
-      }
       function insertcontact()
       {
         console.log("working");
         var user= 'contact/';
         var phone= $('#phonenumc').val();
-        if(checkri(phone,user))
-        {
-          console.log(phone);
-          firebase.database().ref(user+phone).set({
-            email: $('#emailc').val(),
-            name : $('#namec').val(),
-            number : phone,
-            subject : $('#subjectc').val(),
-            message : $('#messagec').val()
-          }); 
-        }
+        firebase.database().ref(user+phone).on('value',function(data)
+          {
+            if(data.exists()==false)
+            {
+             
+              console.log(cnic);
+              firebase.database().ref(user+phone).set({
+                email: $('#emailc').val(),
+                name : $('#namec').val(),
+                number : phone,
+                subject : $('#subjectc').val(),
+                message : $('#messagec').val()
+              }); 
+              return 1;
+            }
+          });
       }
 
-      function checkri(cnic1,user)
-          {
-            var checker;
-          firebase.database().ref(user+cnic1).on('value',function(data)
-          {
-            checker= data.val();
-               
-          });
-          return checker==null;
-        }
         $("#btnRegisterID1").click(insertd);
         $("#btnRegisterID").click(insertdr);
         $("#btnContact").click(insertcontact);

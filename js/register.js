@@ -217,8 +217,7 @@ $(document).ready(function()
             {
                 if(isOver18(new Date($("#dbirthday").val())))
                 {
-                    
-                        enabler();
+                        enabled();
                 }
                 else
                 {
