@@ -21,10 +21,10 @@ $(document).ready(function()
         $("#home-tab").removeClass("active");
         
     });
-    $("#passdrivec").keyup(passcheckd);
-    $("#passridec").keyup(passcheckr);
-    $("#passride").keyup(passcheckr);
-    $("#passdrive").keyup(passcheckd);
+    // $("#passdrivec").keyup(passcheckd);
+    // $("#passridec").keyup(passcheckr);
+    // $("#passride").keyup(passcheckr);
+    // $("#passdrive").keyup(passcheckd);
     $("#cnicd").keyup(passcnic);
     $("#cnicr").keyup(passcnicr);
     $("#dbirthday").change(passcheckage);
@@ -181,37 +181,37 @@ $(document).ready(function()
             
         }
     }
-    function passcheckd()
-    { 
-        if($("#passdrive").val() == $("#passdrivec").val())
-        {
-            $("#passdrive").removeClass("wrongpass");
-            $("#passdrivec").removeClass("wrongpass");
-        }
-        else
-        {
+    // function passcheckd()
+    // { 
+    //     if($("#passdrive").val() == $("#passdrivec").val())
+    //     {
+    //         $("#passdrive").removeClass("wrongpass");
+    //         $("#passdrivec").removeClass("wrongpass");
+    //     }
+    //     else
+    //     {
             
-            $("#passdrivec").addClass("wrongpass");
-            $("#passdrive").addClass("wrongpass");
-        }
+    //         $("#passdrivec").addClass("wrongpass");
+    //         $("#passdrive").addClass("wrongpass");
+    //     }
 
-    }
-    function passcheckr()
-    {
-        if($("#passride").val() == $("#passridec").val())
-        {
+    // }
+    // function passcheckr()
+    // {
+    //     if($("#passride").val() == $("#passridec").val())
+    //     {
         
-            $("#passride").removeClass("wrongpass");
-            $("#passridec").removeClass("wrongpass");
-        }
-        else
-        {
-            $("#passride").addClass("wrongpass");
-            $("#passridec").addClass("wrongpass");
-        }
-    }
+    //         $("#passride").removeClass("wrongpass");
+    //         $("#passridec").removeClass("wrongpass");
+    //     }
+    //     else
+    //     {
+    //         $("#passride").addClass("wrongpass");
+    //         $("#passridec").addClass("wrongpass");
+    //     }
+    // }
     $(document).keyup(function (event) {
-        if($("#passdrive").val() == $("#passdrivec").val())
+        // if($("#passdrive").val() == $("#passdrivec").val())
         {
             if($("#cnicd").val().match(cnicn))
             {
@@ -229,11 +229,11 @@ $(document).ready(function()
                 disabled();
             }
         }
-        else 
-        {
-            disabled();
-        }
-        if($("#passride").val() == $("#passridec").val())
+        // else 
+        // {
+        //     disabled();
+        // }
+        //if($("#passride").val() == $("#passridec").val())
         {
             if($("#cnicr").val().match(cnicn))
             {
@@ -251,10 +251,10 @@ $(document).ready(function()
                 disabler();
             }
         }
-        else
-        {
-            disabler();
-        }
+        // else
+        // {
+        //     disabler();
+        // }
         
     });
     

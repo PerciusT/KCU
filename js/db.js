@@ -94,7 +94,8 @@
         var email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
         function validated()
         {
-            if($("#fname").val()==""||$("#lname").val()==""||$("#emaild").val()==""||$("#driverPH").val()==""||$("#carnumb").val()==""||$("#selectType").val()=="")
+          //$("#fname").val()==""||$("#emaild").val()==""||
+            if($("#lname").val()==""||$("#driverPH").val()==""||$("#carnumb").val()==""||$("#selectType").val()=="")
             {
                 
                 console.log("disabled");
@@ -102,7 +103,7 @@
             }
             else
             {
-              if($("#emaild").val().match(email))
+              // if($("#emaild").val().match(email))
               {
                 if($("#driverPH").val().match(numbers))
                 {
@@ -113,22 +114,23 @@
                   return false
                 }
               }
-              else
-              {
-                return false;
-              }
+              // else
+              // {
+              //   return false;
+              // }
             }
         }
         function validater()
         {
-          if($("#fnamer").val()==""||$("#namer").val()==""||$("#emailr").val()==""||$("#phoner").val()==""||$("#occupation").val()==""||$("#addressr").val()=="")
+          //$("#fnamer").val()==""||$("#emailr").val()==""||$("#occupation").val()==""||$("#addressr").val()==""
+          if($("#namer").val()==""||$("#phoner").val()=="")
           {
               console.log("disabler");
               return false;
           }
           else
           {
-              if($("#emailr").val().match(email))
+              //if($("#emailr").val().match(email))
               {
                 if($("#phoner").val().match(numbers))
                 {
@@ -139,10 +141,10 @@
                   return false
                 }
               }
-              else
-              {
-                return false;
-              }
+              // else
+              // {
+              //   return false;
+              // }
           }
         }
 
@@ -191,7 +193,7 @@
                 father : $('input[name="lname"]').val(),
                 gender : genderd,
                 name : $('input[name="fname"]').val(),
-                password : $('input[name="pass"]').val(),
+                // password : $('input[name="pass"]').val(),
                 phone : $('input[name="phone"]').val(),
                 type : $('select[name="cartype"]').val(),
                 });
@@ -224,7 +226,7 @@
                 father : $('#fnamer').val(),
                 gender : genderr,
                 name : $('#namer').val(),
-                password : $('#passride').val(),
+                // password : $('#passride').val(),
                 phone : $('#phoner').val(),
                 occupation : $('#occupationr').val(),
                 address : $('#addressr').val()
