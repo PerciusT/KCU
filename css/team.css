@@ -18,6 +18,10 @@
 {
   color: #1acf9a;
 }
+.viss
+{
+  font-size: 2.3rem;
+}
 .ourvision
 {
   margin-top: 0%;
@@ -34,7 +38,7 @@
 box-shadow: 0px 2px 16px 5px rgba(28,110,164,0.89);
   border-radius: 40px 0px 40px 0px;
   background-color: rgba(2, 91, 141, 0.9);
-  color: #1acf9a;
+  color: white;
 }
 @media (max-width: 991px)
 {
@@ -61,6 +65,7 @@ box-shadow: 0px 2px 16px 5px rgba(28,110,164,0.89);
     padding-top: 15%;
     padding-bottom: 8%;
     transform: scale(0.8);
+    color: white;
   }
 }
 .carousel-inner
@@ -230,14 +235,15 @@ NET TEMPLATE CSS*/
     color: #8a8a8a;
 }
 .team-member .photo {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
     border-radius: 100%;
     overflow: hidden;
     border: 1px solid rgba(2, 99, 141, 1.0);
     margin: 0 auto;
     background-color: #ffffff;
-    padding: 4px;
+    padding: 0px;
 }
 .follow-on ul{
     padding: 0px;
@@ -248,9 +254,10 @@ NET TEMPLATE CSS*/
     list-style: none;
     font-size: 20px;
     text-align: center;
-    margin: 10px 0px 10px;
+    margin: 10px auto 10px;
     width: 20%;
 }
+
 .follow-on ul li a i {
     color: #fff;
     border-radius: 100%;
@@ -262,17 +269,20 @@ NET TEMPLATE CSS*/
 .follow-on ul li a i:hover{
     opacity: 0.8;
 }
-.follow-on ul li a i.fa.fa-facebook {
+.follow-on ul li a i.fab.fa-linkedin {
     background-color: #3b5997;
 }
 .follow-on ul li a i.fa.fa-twitter {
     background-color: #57aced;
 }
+.follow-on ul li a i.fas.fa-envelope-open-text {
+    background-color: #9acd32;
+}
 .follow-on ul li a i.fa.fa-pinterest-p {
     background-color: #cb2026;
 }
-.follow-on ul li a i.fa.fa-instagram {
-    background-color: #3e729a;
+.follow-on ul li a i.fab.fa-instagram {
+    background-color: #cb2026;
 }
 .follow-on ul li a i.fa.fa-google-plus {
     background-color: #db4d41;
