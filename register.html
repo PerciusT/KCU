@@ -88,8 +88,8 @@
                 <div class="row">
                     <div class="col-md-3 register-left">
                         <img src="img/convenient.png" class="imgjump" alt=""/>
-                        <h3><!-- Welcome --></h3>
-                        <p><!-- You are 30 seconds away from becoming part of our family! --></p>
+                        <h3>Welcome</h3>
+                        <p>You are 30 seconds away from becoming part of our family!</p>
                         <input type="submit" class="btngrey" id="loginbtn" name="" value="coming soon" disabled/><br/>
                     </div>
                     <div class="col-md-9 register-right">
@@ -111,7 +111,7 @@
                                             <input type="text" class="form-control" id="fname" name="fname" placeholder="Name *" value="" required/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="lname" name="lname" placeholder="Father Name *" value="" required/>
+                                            <input type="text" class="form-control" id="lname" name="lname" placeholder="Father Name *" value=""/>
                                         </div>
                                         
                                         <div class="form-group">
@@ -126,15 +126,16 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="form-group">
+                                       
+                                         <div class="form-group">
                                             <input type="email" class="form-control" name="email" placeholder="Your Email *" id="emaild" value="" required/>
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <input type="password" class="form-control" name="pass" id="passdrive" placeholder="Password *" value="" minlength="8" required/>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control" name="passc" id="passdrivec" placeholder="Confirm Password *" value="" minlength="8" required/>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="col-md-6 col-sm-7">
                                         <div class="form-group">
@@ -148,10 +149,7 @@
                                             <input type="date" name="birth" id="dbirthday" class="form-control birthday driver" min="1930-12-31" placeholder="Your Age*" value="" required/>
                                         </div>
 
-                                        <div class="form-group">
-                                            <label for="cnicd">CNIC</label>
-                                           <input type="text" class ="form-control" id="cnicd" name="cnic" maxlength="15" placeholder="61101-1234567-1*" required/>
-                                        </div>
+                                        
                                         <div class="form-group">
                                             <label for="#selectType">Car Type</label>
                                             <select class="form-control"  name="cartype" id="selectType" required>
@@ -175,7 +173,7 @@
                                             <input type="text" class="form-control" id="namer" name="fname" placeholder="Name *" value="" required/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control " id="fnamer" name="lname" placeholder="Father Name *" value="" required/>
+                                            <input type="text" class="form-control " id="fnamer" name="lname" placeholder="Father Name *" value="" />
                                         </div>
                                         <div class="form-group">
                                             <input type="email" class="form-control" id="emailr" name="email" placeholder="Email *" value="" required/>
@@ -187,12 +185,13 @@
                                             <label for="cnicr">CNIC</label>
                                            <input type="text" class ="form-control" id="cnicr" name="cnic" maxlength="15" placeholder="61101-1234567-1*" required/>
                                         </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-7">
+
                                         <div class="form-group">
                                             <label for="#date">Age</label>
                                             <input type="date" name="birth" id="rbirthday" class="form-control rider birthday" placeholder="Your Age*" min="1930-12-31" value="" required/>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-7">
                                         <div class="form-group">
                                             <div class="maxl">
                                                 <label class="radio inline"> 
@@ -205,17 +204,17 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <input type="password" class="form-control" id="passride" name="pass" placeholder="Password *" value="" minlength="8" required/>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control" id="passridec" name="passc" placeholder="Confirm Password *" value="" minlength="8" required  />
-                                        </div>
+                                        </div> -->
                                         <div class="form-group" name="qanswer">
-                                            <input type="text" class="form-control" placeholder="Address *" id="addressr" name="address" value="" required/>
+                                            <input type="text" class="form-control" placeholder="Address *" id="addressr" name="address" value="" />
                                         </div>
                                         <div class="form-group" name="qanswer2">
-                                            <input type="text" class="form-control" placeholder="Occupation *" id="occupationr" name="occupation" value="" required/>
+                                            <input type="text" class="form-control" placeholder="Occupation *" id="occupationr" name="occupation" value="" />
                                         </div>
                                         <label for="btnRegisterID" id="lblsuccess"></label>
                                         <input type="submit" id="btnRegisterID" name="btn" class="btnRegister"  value="Register" />
