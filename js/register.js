@@ -212,29 +212,44 @@ $(document).ready(function()
     // }
     $(document).keyup(function (event) {
         // if($("#passdrive").val() == $("#passdrivec").val())
-        {
-            if($("#cnicd").val().match(cnicn))
-            {
-                if(isOver18(new Date($("#dbirthday").val())))
-                {
-                        enabled();
-                }
-                else
-                {
-                    disabled();
-                }
-            }
-            else
-            {
-                disabled();
-            }
-        }
+        //{
+            // if($("#cnicd").val().match(cnicn))
+            // {
+            //     if(isOver18(new Date($("#dbirthday").val())))
+            //     {
+            //             enabled();
+            //     }
+            //     else
+            //     {
+            //         disabled();
+            //     }
+            // }
+            // else
+            // {
+            //     disabled();
+            // }
+        //}
         // else 
         // {
         //     disabled();
         // }
         //if($("#passride").val() == $("#passridec").val())
-        {
+        //{
+            if($("#cnicd").val().match(cnicn))
+            {
+                if(isOver10(new Date($("#dbirthday").val())))
+                {
+                    enabler();
+                }
+                else
+                {
+                   disabler();
+                }
+            }
+            else
+            {
+                disabler();
+            }
             if($("#cnicr").val().match(cnicn))
             {
                 if(isOver10(new Date($("#rbirthday").val())))
@@ -250,7 +265,7 @@ $(document).ready(function()
             {
                 disabler();
             }
-        }
+        //}
         // else
         // {
         //     disabler();
