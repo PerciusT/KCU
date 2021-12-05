@@ -161,6 +161,10 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
   padding: 0;
 }
+.titleimg
+{
+  transform: scale(1.1);
+}
 .navbar ul {
   margin: 0;
   padding: 0;
@@ -1823,4 +1827,8 @@ THIS IS FOR THE COUNTDOWN IN THE TESTIMONIAL*/
     background-color: #83cffb;
     border-radius: 90px;
     border: 2px ridge #547fc4;
+  }
+  .subbutton
+  {
+    outline: none;
   }
