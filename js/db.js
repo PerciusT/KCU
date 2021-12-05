@@ -247,7 +247,7 @@
             if(data.exists()==false)
             {
              
-              console.log(cnic);
+              console.log(phone);
               firebase.database().ref(user+phone).set({
                 email: $('#emailc').val(),
                 name : $('#namec').val(),
